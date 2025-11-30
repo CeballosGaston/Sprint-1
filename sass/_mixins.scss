@@ -1,0 +1,37 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin button-base(
+  $bg-c,
+  $color,
+  $padding,
+  $width,
+  $radius,
+  $font-size,
+  $shadow: false
+) {
+  background-color: $bg-c;
+  color: $color;
+  width: $width;
+  padding: $padding;
+  border: none;
+  border-radius: $radius;
+  font-weight: 600;
+  font-size: $font-size;
+  cursor: pointer;
+
+  @if $shadow == true {
+    @extend %shadow;
+  }
+}
+
+@mixin section($margin: 0, $padding: 0, $width: 0) {
+  @include flex-center();
+  flex-direction: column;
+  width: $width;
+  margin: $margin;
+  padding: $padding;
+}

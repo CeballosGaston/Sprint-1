@@ -1,0 +1,13 @@
+@use "variables";
+
+%paragraph-style {
+  font-family: "Rubik", sans-serif;
+  line-height: 1.5;
+  font-size: 0.9rem;
+  color: variables.$grey-text;
+}
+
+
+%shadow {
+  box-shadow: 0 8px 15px rgba(82, 102, 223, 0.25);
+}

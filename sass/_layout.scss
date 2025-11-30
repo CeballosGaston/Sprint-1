@@ -1,0 +1,540 @@
+@use "mixins";
+@use "placeholders";
+@use "variables";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  padding: 0 10%;
+}
+
+.h2-style {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+/*-------------Header-----------------*/
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0 70px;
+}
+
+
+
+/*-----------Menú Hamburguesa---------------*/
+
+#menu-hamburguesa {
+  display: none;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100vh;
+  background: variables.$hamburger-color;
+  opacity: 0.9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  z-index: 30;
+  transition: right 0.3s ease;
+}
+
+.menu-header {
+  width: 100%;
+  padding: 1.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img-logo-burger {
+  margin: 0.5rem 9.2rem 0rem 1rem;
+}
+.close-burger {
+  padding: 1rem 2rem 7rem 2rem;
+  margin: 1rem 0 0 0;
+  cursor: pointer;
+}
+.img-close-burger {
+  position: absolute;
+  margin: 0.8rem 0 0 0;
+}
+
+.nav-links {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+
+  li {
+    border-top: 1px solid gray;
+    padding: 1rem 7rem;
+    margin: 0rem 2rem;
+
+    a {
+      text-decoration: none;
+      color: white;
+      font-size: 20px;
+      letter-spacing: 2px;
+    }
+  }
+}
+
+.nav-redes {
+  width: 20%;
+  padding-top: 30%;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6rem 4rem 0rem 4em;
+}
+
+#menu-hamburguesa:checked ~ .menu {
+  right: 0;
+}
+
+/*----------Imagen ordenador-------------*/
+
+.imagen-1-box {
+  @include mixins.flex-center();
+  position: relative;
+  flex-direction: column;
+  margin: 4rem 0 4rem 0;
+}
+
+/*-----------HERO-------------*/
+
+.fondo-azul {
+  position: absolute;
+  top: 2rem;
+  left: 6rem;
+  width: 90%;
+  height: 15rem;
+  background-color: #5266df;
+  border-bottom-left-radius: 90px;
+  z-index: 0;
+}
+
+.hero-imagen {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.hero {
+  @include mixins.section(1rem 0 8rem 0, 2rem 0, 100%);
+}
+
+.hero-title {
+  position: relative;
+  text-align: center;
+  font-size: 180%;
+  z-index: 1;
+}
+.paragraph {
+  @extend %paragraph-style;
+  text-align: center;
+}
+
+.hero-btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  text-align: center;
+
+  padding: 0 1rem;
+}
+
+.btn-blue-one {
+  @include mixins.button-base(
+    variables.$blue-primary,
+    white,
+    0.7rem 0,
+    100%,
+    4px,
+    0.9rem,
+    true
+  );
+}
+
+.btn-grey {
+  @include mixins.button-base(
+    #f7f7f7,
+    #4a4a4a,
+    0.7rem 1rem,
+    100%,
+    6px,
+    0.9rem,
+    false
+  );
+}
+
+/*----------FEATURES-----------*/
+
+.features {
+  @include mixins.section(2rem 0 6rem 0, 0, 100%);
+}
+
+.features-options {
+  @include mixins.section(2rem, 0, 100%);
+}
+
+.nav-options {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0;
+  text-align: center;
+  border-top: 1px solid #ccc;
+  font-weight: 500;
+  padding: 1rem 0 1rem 0;
+}
+
+.nav-options::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 40%;
+  height: 0.2rem;
+  background: variables.$red-color;
+
+  opacity: 0;
+}
+
+.nav-options:hover::after {
+  opacity: 1;
+}
+
+.nav-options:hover {
+  border-bottom: 2px solid #ccc;
+}
+
+.easy-sharing {
+  border-bottom: 1px solid #ccc;
+}
+
+.feature-tab {
+  position: relative;
+  display: none;
+}
+
+.feature-tab.active {
+  display: block;
+}
+
+.imagen-feature-box {
+  @include mixins.flex-center();
+
+  flex-direction: column;
+}
+
+.fondo-azul-ft {
+  position: absolute;
+  top: 4rem;
+  left: -3rem;
+  width: 90%;
+  height: 50%;
+  background-color: #5266df;
+
+  border-bottom-right-radius: 90px;
+  z-index: 0;
+}
+
+.img-f {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  margin: 2rem 0 6rem 0;
+}
+
+.more-info-features {
+  @extend %shadow;
+  display: none;
+  background-color: variables.$blue-primary;
+  color: white;
+  width: 30%;
+  padding: 0.9rem 0;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin: 2rem 0 0 0;
+}
+
+/*-----------Download the extension-------------*/
+.download-options {
+  @include mixins.flex-center;
+  flex-direction: column;
+}
+
+.download {
+  @include mixins.section(2rem 0rem, 0, 80%);
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  min-height: 20rem;
+}
+
+.img-extension {
+  margin: 1.5rem 0 1.5rem 0;
+}
+
+.h3-style {
+  margin: 0 0 0.5rem 0;
+}
+.h5-style {
+  margin: 0 0 1rem;
+  font-family: "Rubik", sans-serif;
+  line-height: 1;
+  color: variables.$grey-text;
+  text-align: center;
+  font-size: 0.8rem;
+  margin: 0 0 1.5rem 0;
+  font-weight: 300;
+}
+
+.img-extension-dots {
+  margin: 0 0 1rem;
+  width: 100%;
+}
+
+.btn-blue-two {
+  @include mixins.button-base(
+    variables.$blue-primary,
+    white,
+    0.7rem 0.2rem,
+    80%,
+    6px,
+    0.7,
+    true
+  );
+  margin: 0 0 1rem 0;
+}
+
+/*------------FAQ--------------*/
+
+.FAQ details {
+  border-bottom: 1px solid #ddd;
+  padding: 0.8rem 0;
+  align-items: center;
+  flex-direction: column;
+}
+
+.summary {
+  list-style: none;
+  cursor: pointer;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.summary svg {
+  transition: transform 0.3s ease, stroke 0.3 ease;
+}
+
+details[open] .summary svg path {
+  stroke: red;
+}
+details[open] .summary svg {
+  transform: rotate(180deg);
+}
+
+.faq-btn-container {
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0 8rem 0;
+}
+
+.more-info-faq {
+  @extend %shadow;
+  background-color: variables.$blue-primary;
+  color: white;
+  width: 30%;
+  padding: 0.9rem 0;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 0.9rem;
+
+  cursor: pointer;
+}
+
+.paragraph-faq {
+  @extend %paragraph-style;
+  text-align: left;
+  margin: 1rem 0 1rem 0;
+}
+
+/*------------CTA--------------*/
+
+.cta {
+  @include mixins.flex-center();
+  flex-direction: column;
+  background-color: rgb(51, 101, 193);
+  width: 100%;
+  margin: 4rem 0 0 0;
+}
+
+.h4-cta-style {
+  text-align: center;
+  color: white;
+  padding: 4rem 0 1rem 0;
+  font-weight: 500;
+  font-size: 0.9rem;
+  letter-spacing: 0.2rem;
+}
+
+.h2-cta-style {
+  text-align: center;
+
+  color: white;
+  font-size: 1.75rem;
+  margin: 0 0 2rem 0;
+  font-weight: 500;
+}
+
+/*-------------CTA EMAIL-----------*/
+
+.input-cta::placeholder {
+  color: rgba(135, 123, 123, 0.6);
+}
+
+.input-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  input {
+    padding: 16px;
+    margin-top: 16px;
+    margin-bottom: 0rem;
+    border: 1px solid var(--gris);
+    border-radius: 6px;
+    box-sizing: border-box;
+  }
+}
+
+.error-message {
+  display: none;
+  background-color: variables.$red-color;
+  color: white;
+  margin-bottom: 1rem;
+  font-size: 12px;
+  padding: 8px;
+  border-radius: 0 0 10px 10px;
+}
+
+.btn-red {
+  @include mixins.button-base(
+    variables.$red-color,
+    white,
+    14px 0px,
+    100%,
+    6px,
+    16px,
+    false
+  );
+  margin: 16px 0 2rem;
+}
+
+.icon-error {
+  position: absolute;
+  right: 2rem;
+  top: 1.9rem;
+  width: 1.3rem;
+  pointer-events: none;
+  display: none;
+}
+
+/*---------------FOOTER----------------*/
+
+.footer {
+  @include mixins.flex-center();
+  flex-direction: column;
+  background-color: variables.$footer-color;
+  width: 100%;
+  margin: 0 0;
+}
+
+.logo-svg {
+  margin: 2rem 0;
+}
+
+.nav-enlace {
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  margin: 1rem 0;
+  font-weight: 400;
+}
+
+.icons-footer {
+  @include mixins.flex-center();
+  gap: 2rem;
+  margin: 2rem 0 3rem 0;
+}
+
+/*------------DESKTON / MEDIA QUERIES-----------*/
+
+@media screen and (min-width: 1024px) {
+  .navbar {
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 2rem;
+  }
+
+  .hamburguesa{
+    display:none;
+  }
+
+
+    
+
+  .nav-links {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+
+  li {
+    border-top: 1px solid gray;
+    padding: 1rem 7rem;
+    margin: 0rem 2rem;
+
+    a {
+      text-decoration: none;
+      color: white;
+      font-size: 20px;
+      letter-spacing: 2px;
+    }
+  }
+}
+}
