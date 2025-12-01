@@ -1,3 +1,15 @@
+
+@mixin flex-space-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@mixin flex-flex-end{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 @mixin flex-center {
   display: flex;
   justify-content: center;
@@ -34,4 +46,8 @@
   width: $width;
   margin: $margin;
   padding: $padding;
+}
+
+@mixin shadow-type {
+  box-shadow: 0 8px 15px rgba(82, 102, 223, 0.25);
 }

@@ -9,7 +9,7 @@
 
 body {
   padding: 0;
-  font-family: "Inter", sans-serif;
+  margin: 0;
 }
 
 .container {
@@ -31,8 +31,6 @@ body {
   align-items: center;
   padding: 30px 0 70px;
 }
-
-
 
 /*-----------Menú Hamburguesa---------------*/
 
@@ -205,7 +203,7 @@ body {
   width: 100%;
   padding: 0.5rem 0;
   text-align: center;
-  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
   font-weight: 500;
   padding: 1rem 0 1rem 0;
 }
@@ -232,8 +230,8 @@ body {
   border-bottom: 2px solid #ccc;
 }
 
-.easy-sharing {
-  border-bottom: 1px solid #ccc;
+.simple-book {
+  border-top: 1px solid #ccc;
 }
 
 .feature-tab {
@@ -501,7 +499,7 @@ details[open] .summary svg {
   margin: 2rem 0 3rem 0;
 }
 
-/*------------DESKTON / MEDIA QUERIES-----------*/
+/*------------DESKTOP / MEDIA QUERY-----------*/
 
 @media screen and (min-width: 1024px) {
   .navbar {
@@ -510,31 +508,117 @@ details[open] .summary svg {
     padding: 2rem;
   }
 
-  .hamburguesa{
-    display:none;
+  #menu-hamburguesa {
+    display: none;
+  }
+  .hamburguesa {
+    display: none;
   }
 
+  .logo-burger {
+    display: none;
+  }
+  .menu {
+    position: static;
+    right: auto;
+    width: auto;
+    height: auto;
+    background: transparent;
+    opacity: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    transition: none;
+    z-index: initial;
+    padding: 0;
+  }
 
-    
+  /*----------- LO PONGO EN LÍNEA---------------*/
 
   .nav-links {
-  width: 100%;
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  padding-top: 100px;
-
-  li {
-    border-top: 1px solid gray;
-    padding: 1rem 7rem;
-    margin: 0rem 2rem;
-
-    a {
-      text-decoration: none;
-      color: white;
-      font-size: 20px;
-      letter-spacing: 2px;
-    }
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    width: auto;
+    padding-top: 0;
   }
-}
+
+  /*---------LE SACO LAS LÍNEAS SEPARADORAS-----------*/
+
+  .nav-links li {
+    border-top: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-links li a {
+    color: black;
+    font-size: 1rem;
+    letter-spacing: normal;
+  }
+
+  .nav-links li.last-feature a {
+    @include mixins.shadow-type();
+    color: white;
+    background-color: variables.$red-color;
+    padding: 0.6rem 1.4rem;
+    border-radius: 0.4rem;
+  }
+
+  /*---OCULTAR LINKS DE REDES Y LA X DE CERRAR----*/
+
+  .nav-redes {
+    display: none;
+  }
+  .menu-header {
+    display: none;
+  }
+  /*--------------HERO-----------------*/
+
+  .main-hero {
+    @include mixins.flex-space-between();
+    gap: 4rem;
+    padding: 4rem 0;
+    flex-direction: row-reverse;
+  }
+
+  .hero {
+    flex: 1;
+    text-align: left;
+    align-items: flex-start;
+    align-items: right;
+  }
+
+  .hero-title,
+  .hero-btns,
+  .paragraph-hero {
+    text-align: left;
+  }
+  .hero-btns {
+    justify-content: space-between;
+    padding: 0;
+    width: 70%;
+  }
+
+  .imagen-1-box {
+    @include mixins.flex-flex-end();
+    flex: 1;
+  }
+  .hero-imagen {
+    max-width: 100%;
+  }
+
+  /*------------FEATURES----------------*/
+  .paragraph-features {
+    padding: 0rem 25rem 0rem 25rem;
+  }
+
+  .features-options {
+    flex-direction: row;
+  }
+  .simple-book {
+    border-top: none;
+  }
 }
