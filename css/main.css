@@ -704,8 +704,6 @@ details[open] .summary svg {
     padding: 4rem 20rem 0rem 20rem;
   }
   /*--------------TEXTO FINAL E INPUT----------------*/
-}
-@media screen and (min-width: 1024px) and (min-width: 1024px) {
   .input-container {
     flex-direction: row;
     justify-content: center;
@@ -713,6 +711,7 @@ details[open] .summary svg {
     width: 100%;
     gap: 1rem;
     position: relative;
+    margin: 1rem;
   }
   .input-container input {
     flex: none;
@@ -732,8 +731,20 @@ details[open] .summary svg {
     margin-bottom: 6rem;
   }
   .icon-error {
-    top: 50%;
-    transform: translateY(-50%);
+    top: 20%;
+    left: 52%;
+  }
+  /*--------------FOOTER----------------------*/
+  .footer {
+    flex-direction: row;
+    height: 10%;
+    gap: 2rem;
+  }
+  .icons-footer {
+    margin: 0 2rem 0 44rem;
+  }
+  .nav-enlace:hover {
+    color: rgb(229, 19, 19);
   }
 }
 
