@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark Landig Page Whith Boostrap</title>
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            src="starter-code/images/logo-bookmark.svg"
+            alt="Bookmark Logo"
+          />
+        </a>
+        <button
+          type="button"
+          class="navbar-toggler custom-toggler collapsed"
+          data-bs-toggle="collapse"
+          data-bs-target="#menu"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto text-center">
+            <li class="nav-item">
+              <a href="#" class="nav-link">Features</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="main-hero py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div
+            class="col-md-6 position-relative text-center mb-4 mb-md-0 order-1 order-md-2"
+          >
+            <div class="fondo-azul position-absolute"></div>
+            <img
+              src="starter-code/images/illustration-hero.svg"
+              class="hero-imagen img-fluid"
+              alt="Hero Image"
+            />
+          </div>
+
+          <div class="col-md-6 text-center text-md-start order-2 order-md-1">
+            <h1 class="hero-title mb-3">
+              A Simple Bookmark <br />
+              Manager
+            </h1>
+            <p class="paragraph paragraph-hero mb-4">
+              A clean and simple interface to organize your favourite websites.
+              Open a new browser tab and see your sites load instantly. Try it
+              for free.
+            </p>
+
+            <div
+              class="hero-btns d-flex justify-content-center justify-content-md-start gap-3 flex-wrap"
+            >
+              <button class="btn btn-primary btn-blue-one">
+                Get it on Chrome
+              </button>
+              <button class="btn btn-secondary btn-grey">
+                Get it on Firefox
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features py-5">
+      <div class="container text-center">
+        <h2 class="h2-style">Features</h2>
+        <p class="paragraph paragraph-features mb-4">
+          Our aim is to make it quick and easy for you to access your favourite
+          websites...
+        </p>
+
+        <!-- -----------------NAV OPTIONS--------------------- -->
+
+        <nav
+          class="nav-options-container d-flex flex-column flex-md-row justify-content-center mb-4"
+        >
+          <span
+            class="simple-book nav-options mb-3 mb-md-0 me-md-1"
+            data-option="1"
+            >Simple Bookmarking</span
+          >
+          <span class="nav-options mb-3 mb-md-0 me-md-1" data-option="2"
+            >Speedy Searching</span
+          >
+          <span class="nav-options mb-3 mb-md-0" data-option="3"
+            >Easy Sharing</span
+          >
+        </nav>
+
+        <!-- -------------------FEATURES---------------------- -->
+
+        <section class="imagen-feature-box">
+          <!--------------------- TAB 1 -------------------------->
+          <article
+            class="features-1 feature-tab active w-100 position-relative mb-5"
+          >
+            <div class="row align-items-center">
+              <figure class="col-12 col-md-6 order-md-1 text-center">
+                <img
+                  src="starter-code/images/illustration-features-tab-1.svg"
+                  class="img-fluid mb-4 w-75"
+                />
+              </figure>
+              <figcaption
+                class="col-12 col-md-6 order-md-2 text-center text-md-start"
+              >
+                <h2 class="h2-style h2-ft">Bookmark in one click</h2>
+                <p class="paragraph p-ft mb-3">
+                  Organize your bookmarks however you like. Our simple
+                  drag-and-drop interface gives you complete control over how
+                  you manage your favourite sites.
+                </p>
+                <button class="btn btn-primary more-info-features">
+                  More Info
+                </button>
+              </figcaption>
+            </div>
+          </article>
+
+          <!------------------------------- TAB 2 ------------------------------>
+          <article class="features-2 feature-tab w-100 position-relative mb-5">
+            <div class="row align-items-center">
+              <figure class="col-12 col-md-6 order-md-1 text-center">
+                <img
+                  src="starter-code/images/illustration-features-tab-2.svg"
+                  class="img-fluid mb-4 w-75"
+                />
+              </figure>
+              <figcaption
+                class="col-12 col-md-6 order-md-2 text-center text-md-start"
+              >
+                <h2 class="h2-style h2-ft">Intelligent search</h2>
+                <p class="paragraph p-ft mb-3">
+                  Our powerful search feature will help you find saved sites in
+                  no time at all. No need to trawl through all of bookmarks.
+                </p>
+                <button class="btn btn-primary more-info-features">
+                  More Info
+                </button>
+              </figcaption>
+            </div>
+          </article>
+
+          <!-------------------------------- TAB 3 ---------------------------------------->
+          <article class="features-3 feature-tab w-100 position-relative mb-5">
+            <div class="row align-items-center">
+              <figure class="col-12 col-md-6 order-md-1 text-center">
+                <img
+                  src="starter-code/images/illustration-features-tab-3.svg"
+                  class="img-fluid mb-4 w-75"
+                />
+              </figure>
+              <figcaption
+                class="col-12 col-md-6 order-md-2 text-center text-md-start"
+              >
+                <h2 class="h2-style h2-ft">Share your bookmarks</h2>
+                <p class="paragraph p-ft mb-3">
+                  Easily share your bookmarks and collections with others.
+                  Create a shareable link that you can send at the click of
+                  button
+                </p>
+                <button class="btn btn-primary more-info-features">
+                  More Info
+                </button>
+              </figcaption>
+            </div>
+          </article>
+        </section>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="row text-center">
+        <h2 class="h2-style">Download the extension</h2>
+        <p class="paragraph dwn-p">
+          We've got more broswsers in the pipeline. Please do let us know if
+          you've got a favourite you'd like us to prioritize.
+        </p>
+      </div>
+
+      <div class="row d-flex flex-column alignt-items-center">
+        <article class="col download alt" atl="chrome-download">
+          <img
+            src="starter-code/images/logo-chrome.svg"
+            alt="Chrome Logo"
+            class="img-extension"
+          />
+          <h3 class="h3-style">Add to Chrome</h3>
+          <h5 class="h5-style">Minimum version 62</h5>
+          <img
+            src="starter-code/images/bg-dots.svg"
+            class="img-extension-dots"
+          />
+          <button class="btn-blue-two">Add & Install Extension</button>
+        </article>
+
+        <article class="col download" alt="firefox-download">
+          <img
+            src="starter-code/images/logo-firefox.svg"
+            alt="Firefox Logo"
+            class="img-extension"
+          />
+          <h3 class="h3-style">Add to Firefox</h3>
+          <h5 class="h5-style">Minimum version 55</h5>
+          <img
+            src="starter-code/images/bg-dots.svg"
+            class="img-extension-dots"
+          />
+          <button class="btn-blue-two">Add & Install Extension</button>
+        </article>
+
+        <article class="col download" alt="opera-download">
+          <img
+            src="starter-code/images/logo-opera.svg"
+            alt="Opera Logo"
+            class="img-extension"
+          />
+          <h3 class="h3-style">Add to Opera</h3>
+          <h5 class="h5-style">Minimum version 46</h5>
+          <img
+            src="starter-code/images/bg-dots.svg"
+            class="img-extension-dots"
+          />
+          <button class="btn-blue-two">Add & Install Extension</button>
+        </article>
+      </div>
+    </section>
+
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
