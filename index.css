@@ -99,22 +99,20 @@ a.nav-link {
   .more-info-features {
     display: block;
   }
-
-  
-  }
-
-  
-
-/* .img-extension {
-  margin: 1.5rem 0;
+}
+.scaled {
+  transform: scale(0.85);
+  transform-origin: top center;
 }
 
-.img-extension-dots {
-  width: 100%;
-  margin-bottom: 1rem;
-} */
+.scaled:nth-child(1) {
+  transform: scale(0.85) translateY(0);
+}
 
+.scaled:nth-child(2) {
+  transform: scale(0.85) translateY(2rem); 
+}
 
-
-
-
+.scaled:nth-child(3) {
+  transform: scale(0.85) translateY(4rem); 
+}
