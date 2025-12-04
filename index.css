@@ -40,16 +40,6 @@ a.nav-link {
   height: 100vh;
 }
 
-.btn-blue-one {
-  background-color: #5266df;
-  color: white;
-}
-
-.btn-grey {
-  background-color: #a8a1a1;
-  color: #f7f7f7;
-}
-
 /*-----------------FEATURES--------------------*/
 
 .nav-options {
@@ -112,3 +102,19 @@ a.nav-link {
 
   
   }
+
+  
+
+/* .img-extension {
+  margin: 1.5rem 0;
+}
+
+.img-extension-dots {
+  width: 100%;
+  margin-bottom: 1rem;
+} */
+
+
+
+
+
