@@ -8,10 +8,9 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-
     <!-- ---------------------NAVBAR---------------------- -->
     <nav class="navbar navbar-expand-md">
-      <div class="container">
+      <div class="container mt-4">
         <a class="navbar-brand" href="#">
           <img
             src="starter-code/images/logo-bookmark.svg"
@@ -20,7 +19,7 @@
         </a>
         <button
           type="button"
-          class="navbar-toggler custom-toggler collapsed"
+          class="navbar-toggler custom-toggler"
           data-bs-toggle="collapse"
           data-bs-target="#menu"
           aria-label="Toggle navigation"
@@ -29,19 +28,47 @@
         </button>
 
         <div class="collapse navbar-collapse" id="menu">
-          <ul class="navbar-nav ms-auto text-center">
+          <ul class="navbar-nav w-100 text-center menu-overlay">
+           
+
             <li class="nav-item">
-              <a href="#" class="nav-link">Features</a>
+            
+              <a href="#" class="nav-link menu-link letter-spacing-sm">Features</a>
+           
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">Pricing</a>
+              <a href="#" class="nav-link menu-link letter-spacing-sm">Pricing</a>
+           
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">Contact</a>
+              <a href="#" class="nav-link menu-link letter-spacing-sm">Contact</a>
+           
             </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">Login</a>
+            <li class="nav-item d-md-none">
+              <a href="#" class="nav-link menu-link letter-spacing-sm">Login</a>
             </li>
+            <li class="nav-item d-none d-md-inline-block">
+              <a href="#" class="btn btn-danger text-white shadow px-4 btn-login"
+                >Login</a
+              >
+            </li>
+
+            <div class="d-flex gap-5 mt-3 mt-lg-0 ms-lg-auto mt-5">
+            <a href="#" class="social-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24">
+                <path
+                  d="M22.675 0h-21.35C.592 0 0 .592 0 1.325v21.351C0 23.408.592 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.796.715-1.796 1.764v2.314h3.587l-.467 3.622h-3.12V24h6.116C23.408 24 24 23.408 24 22.676V1.325C24 .592 23.408 0 22.675 0z"
+                  fill="#fff"
+                /></svg
+            ></a>
+            <a href="#" class="social-icon"
+              ><svg width="24" height="24" viewBox="0 0 24 24">
+                <path
+                  d="M24 4.557a9.828 9.828 0 0 1-2.828.775 4.932 4.932 0 0 0 2.165-2.724 9.864 9.864 0 0 1-3.127 1.195 4.918 4.918 0 0 0-8.384 4.482A13.945 13.945 0 0 1 1.671 3.149a4.918 4.918 0 0 0 1.523 6.562 4.903 4.903 0 0 1-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 0 1-2.224.084 4.923 4.923 0 0 0 4.6 3.417A9.868 9.868 0 0 1 0 19.54a13.94 13.94 0 0 0 7.548 2.212c9.057 0 14.009-7.514 14.009-14.009 0-.213-.005-.425-.014-.636A10.025 10.025 0 0 0 24 4.557z"
+                  fill="#fff"
+                /></svg
+            ></a>
+          </div>
           </ul>
         </div>
       </div>
@@ -77,26 +104,22 @@
             <div
               class="hero-btns d-flex justify-content-center justify-content-md-start gap-3 flex-wrap"
             >
-              <button class="btn btn-primary">
-                Get it on Chrome
-              </button>
-              <button class="btn btn-secondary">
-                Get it on Firefox
-              </button>
+              <button class="btn btn-primary">Get it on Chrome</button>
+              <button class="btn btn-secondary">Get it on Firefox</button>
             </div>
           </div>
         </div>
       </div>
     </section>
-<!-- ---------------FEATURES-------------------- -->
+    <!-- ---------------FEATURES-------------------- -->
 
     <section class="features py-5 mt-5">
       <div class="container text-center px-5">
         <h2 class="h2-style">Features</h2>
         <p class="paragraph paragraph-features mb-4 text-muted">
-          Our aim is to make it quick and easy for you to access your
-            favourite websites. Your bookmarks sync between your devices so you
-            can access them on the go
+          Our aim is to make it quick and easy for you to access your favourite
+          websites. Your bookmarks sync between your devices so you can access
+          them on the go
         </p>
 
         <!-- -----------------NAV OPTIONS--------------------- -->
@@ -213,190 +236,290 @@
       </div>
 
       <div class="row justify-content-center gy-4 gx-md-4">
-
-        <article class="col-9 col-md-auto d-flex flex-column align-items-center py-5 rounded-4 shadow mx-md-3 scaled position-relative top-5">
-          <img src="starter-code/images/logo-chrome.svg" alt="Chrome Logo" class="img-fluid py-4"/>
+        <article
+          class="col-9 col-md-auto d-flex flex-column align-items-center py-5 rounded-4 shadow mx-md-3 scaled position-relative top-5"
+        >
+          <img
+            src="starter-code/images/logo-chrome.svg"
+            alt="Chrome Logo"
+            class="img-fluid py-4"
+          />
           <h3 class="mb-2">Add to Chrome</h3>
           <h5 class="mb-4 text-muted fs-6 fw-light">Minimum version 62</h5>
-          <img src="starter-code/images/bg-dots.svg" class="w-100 mb-3"/>
-          <button class="btn btn-primary w-75 btn-blue-two">Add & Install Extension</button>
+          <img src="starter-code/images/bg-dots.svg" class="w-100 mb-3" />
+          <button class="btn btn-primary w-75 btn-blue-two">
+            Add & Install Extension
+          </button>
         </article>
 
-        <article class="col-9 col-md-auto d-flex flex-column align-items-center py-5 rounded-4 shadow mx-md-3 scaled">
-          <img src="starter-code/images/logo-firefox.svg" alt="Firefox Logo" class="img-fluid py-4"/>
+        <article
+          class="col-9 col-md-auto d-flex flex-column align-items-center py-5 rounded-4 shadow mx-md-3 scaled"
+        >
+          <img
+            src="starter-code/images/logo-firefox.svg"
+            alt="Firefox Logo"
+            class="img-fluid py-4"
+          />
           <h3 class="mb-2">Add to Firefox</h3>
           <h5 class="mb-4 text-muted fs-6 fw-light">Minimum version 55</h5>
-          <img src="starter-code/images/bg-dots.svg" class="w-100 mb-3"/>
-          <button class="btn btn-primary w-75 btn-blue-two">Add & Install Extension</button>
+          <img src="starter-code/images/bg-dots.svg" class="w-100 mb-3" />
+          <button class="btn btn-primary w-75 btn-blue-two">
+            Add & Install Extension
+          </button>
         </article>
 
-        <article class="col-9 col-md-auto d-flex flex-column align-items-center py-5 rounded-4 shadow mx-md-3 scaled">
-          <img src="starter-code/images/logo-opera.svg" alt="Opera Logo" class="img-fluid py-4"/>
+        <article
+          class="col-9 col-md-auto d-flex flex-column align-items-center py-5 rounded-4 shadow mx-md-3 scaled"
+        >
+          <img
+            src="starter-code/images/logo-opera.svg"
+            alt="Opera Logo"
+            class="img-fluid py-4"
+          />
           <h3 class="mb-2">Add to Opera</h3>
           <h5 class="mb-4 text-muted fs-6 fw-light">Minimum version 46</h5>
-          <img src="starter-code/images/bg-dots.svg" class="w-100 mb-3"/>
-          <button class="btn btn-primary w-75 btn-blue-two">Add & Install Extension</button>
+          <img src="starter-code/images/bg-dots.svg" class="w-100 mb-3" />
+          <button class="btn btn-primary w-75 btn-blue-two">
+            Add & Install Extension
+          </button>
         </article>
       </div>
     </section>
 
     <!-- -----------------------FAQ---------------------- -->
 
-<section class="FAQ container py-5">
-    <div class="row justify-content-center">
+    <section class="FAQ container py-5">
+      <div class="row justify-content-center">
         <div class="col col-11 col-md-8 col-lg-6">
-
-            <div class="text-center px-3 px-md-5 mb-4 mt-5">
-              <h2 class="h2-style m-5">Frequently Asked Questions</h2>
-              <p class="paragraph text-muted">
-                Here are some of our FAQs. If you have any other questions you'd like answered please feel free to email us.
-              </p>
-            </div>
-          
-            <details class="border-bottom py-3">
-              <summary class="summary d-flex justify-content-between align-items-center">
-                What is Bookmark?
-                <svg class="faq-arrow" xmlns="http://www.w3.org/2000/svg" width="18" height="12">
-                  <path fill="none" stroke="#5267DF" stroke-width="3" d="M1 1l8 8 8-8"/>
-                </svg>
-              </summary>
-              <p class="paragraph-faq mt-2">
-               Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, tempora quas? Iure autem omnis consequatur maiores unde nisi, ullam blanditiis. Consectetur nemo doloremque, laboriosam doloribus adipisci vel exercitationem ipsam fugiat.
-              </p>
-            </details>
-          
-            <details class="border-bottom py-3">
-              <summary class="summary d-flex justify-content-between align-items-center">
-                How can I request a new browser?
-                <svg class="faq-arrow" xmlns="http://www.w3.org/2000/svg" width="18" height="12">
-                  <path fill="none" stroke="#5267DF" stroke-width="3" d="M1 1l8 8 8-8"/>
-                </svg>
-              </summary>
-              <p class="paragraph-faq mt-2">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi voluptatibus doloribus cum. Velit ad voluptates inventore quos iusto quis voluptatem, fuga adipisci, maiores incidunt, expedita similique earum ipsa. Molestiae, rerum?
-              </p>
-            </details>
-          
-            <details class="border-bottom py-3">
-              <summary class="summary d-flex justify-content-between align-items-center">
-                Is there a mobile app?
-                <svg class="faq-arrow" xmlns="http://www.w3.org/2000/svg" width="18" height="12">
-                  <path fill="none" stroke="#5267DF" stroke-width="3" d="M1 1l8 8 8-8"/>
-                </svg>
-              </summary>
-              <p class="paragraph-faq mt-2">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea quam repellendus ad quae provident pariatur laudantium, velit tempora molestias sint. Eligendi modi qui assumenda quia. Vel culpa amet dicta officiis.
-              </p>
-            </details>
-          
-            <details class="border-bottom py-3">
-              <summary class="summary d-flex justify-content-between align-items-center">
-                What about other Chromium browsers?
-                <svg class="faq-arrow" xmlns="http://www.w3.org/2000/svg" width="18" height="12">
-                  <path fill="none" stroke="#5267DF" stroke-width="3" d="M1 1l8 8 8-8"/>
-                </svg>
-              </summary>
-              <p class="paragraph-faq mt-2">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex nihil quasi suscipit quia odit beatae corrupti enim velit repellendus debitis? In architecto adipisci ad nostrum officia eum nisi vel quibusdam!
-              </p>
-            </details>
-          
-            <div class="d-flex justify-content-center mt-5 mb-5">
-              <button class="more-info-faq btn btn-primary py-3 px-4 w-60">More Info</button>
-            </div>
-        </div>
-
-
-    </div>
-
-</section>
-
-
-<section class="py-5 bg-primary text-white">
-  <div class="container text-center">
-
-    <h4 class="text-uppercase fw-medium fs-6 letter-spacing-sm mb-3 mt-4">
-      35.000+ ALREADY JOINED
-    </h4>
-
-    <h2 class="fw-medium mb-5 fs-1 col-md-5 mx-auto">
-      Stay up-to-date with what we're doing
-    </h2>
-
-    <form id="ctaForm" class="row justify-content-center g-2">
-      <div class="col-10 col-md-3">
-        <div class="position-relative input-wrapper error-container mb-3">
-
-          <input type="email" class="form-control py-3 w-100 bg-white text-dark" id="inputEmail" placeholder="Enter your email address"/>
-
-          <img src="starter-code/images/icon-error.svg" alt="Error Icon" class="icon-error d-none"/>
-
-          <div class="error-message d-none bg-danger text-white fs-6 py-2 px-3 text-start fst-italic">
-            Whoops, make sure it's an email
+          <div class="text-center px-3 px-md-5 mb-4 mt-5">
+            <h2 class="h2-style m-5">Frequently Asked Questions</h2>
+            <p class="paragraph text-muted">
+              Here are some of our FAQs. If you have any other questions you'd
+              like answered please feel free to email us.
+            </p>
           </div>
 
+          <details class="border-bottom py-3">
+            <summary
+              class="summary d-flex justify-content-between align-items-center"
+            >
+              What is Bookmark?
+              <svg
+                class="faq-arrow"
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="12"
+              >
+                <path
+                  fill="none"
+                  stroke="#5267DF"
+                  stroke-width="3"
+                  d="M1 1l8 8 8-8"
+                />
+              </svg>
+            </summary>
+            <p class="paragraph-faq mt-2">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur,
+              tempora quas? Iure autem omnis consequatur maiores unde nisi,
+              ullam blanditiis. Consectetur nemo doloremque, laboriosam
+              doloribus adipisci vel exercitationem ipsam fugiat.
+            </p>
+          </details>
+
+          <details class="border-bottom py-3">
+            <summary
+              class="summary d-flex justify-content-between align-items-center"
+            >
+              How can I request a new browser?
+              <svg
+                class="faq-arrow"
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="12"
+              >
+                <path
+                  fill="none"
+                  stroke="#5267DF"
+                  stroke-width="3"
+                  d="M1 1l8 8 8-8"
+                />
+              </svg>
+            </summary>
+            <p class="paragraph-faq mt-2">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi
+              voluptatibus doloribus cum. Velit ad voluptates inventore quos
+              iusto quis voluptatem, fuga adipisci, maiores incidunt, expedita
+              similique earum ipsa. Molestiae, rerum?
+            </p>
+          </details>
+
+          <details class="border-bottom py-3">
+            <summary
+              class="summary d-flex justify-content-between align-items-center"
+            >
+              Is there a mobile app?
+              <svg
+                class="faq-arrow"
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="12"
+              >
+                <path
+                  fill="none"
+                  stroke="#5267DF"
+                  stroke-width="3"
+                  d="M1 1l8 8 8-8"
+                />
+              </svg>
+            </summary>
+            <p class="paragraph-faq mt-2">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea quam
+              repellendus ad quae provident pariatur laudantium, velit tempora
+              molestias sint. Eligendi modi qui assumenda quia. Vel culpa amet
+              dicta officiis.
+            </p>
+          </details>
+
+          <details class="border-bottom py-3">
+            <summary
+              class="summary d-flex justify-content-between align-items-center"
+            >
+              What about other Chromium browsers?
+              <svg
+                class="faq-arrow"
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="12"
+              >
+                <path
+                  fill="none"
+                  stroke="#5267DF"
+                  stroke-width="3"
+                  d="M1 1l8 8 8-8"
+                />
+              </svg>
+            </summary>
+            <p class="paragraph-faq mt-2">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex nihil
+              quasi suscipit quia odit beatae corrupti enim velit repellendus
+              debitis? In architecto adipisci ad nostrum officia eum nisi vel
+              quibusdam!
+            </p>
+          </details>
+
+          <div class="d-flex justify-content-center mt-5 mb-5">
+            <button class="more-info-faq btn btn-primary py-3 px-4 w-60">
+              More Info
+            </button>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="col-10 col-md-2">
-        <button id="ctaButton" type="submit" class="btn btn-danger py-3 w-100">
-          Contact Us
-        </button>
-      </div>
-    </form>
+    <section class="py-5 bg-primary text-white">
+      <div class="container text-center">
+        <h4 class="text-uppercase fw-medium fs-6 letter-spacing-sm mb-3 mt-4">
+          35.000+ ALREADY JOINED
+        </h4>
 
-  </div>
-</section>
+        <h2 class="fw-medium mb-5 fs-1 col-md-5 mx-auto">
+          Stay up-to-date with what we're doing
+        </h2>
 
-
-<footer class="text-white py-5 footer-color" >
-  <div class="container">
-
-    <div class="d-flex flex-column flex-lg-row align-items-center justify-content-start">
-      
-     
-      <div class="mb-5 mb-lg-0">
-        <svg class="logo-svg" width="148" height="25">
-        <g fill="none" fill-rule="evenodd">
-            <path
-              d="M37 6.299h5.227c.746 0 1.434.155 2.062.466.629.311 1.123.735 1.484 1.27s.542 1.12.542 1.754c0 .672-.165 1.254-.495 1.746-.33.491-.762.868-1.297 1.129v.15c.697.248 1.25.643 1.661 1.185.41.541.616 1.191.616 1.95 0 .735-.196 1.385-.588 1.951a3.817 3.817 0 0 1-1.587 1.307c-.665.305-1.403.457-2.212.457H37V6.299zm5.04 5.45c.548 0 .986-.152 1.316-.457.33-.305.495-.688.495-1.148 0-.448-.159-.824-.476-1.13-.318-.304-.738-.457-1.26-.457H39.52v3.192h2.52zm.28 5.619c.61 0 1.086-.159 1.428-.476.342-.317.513-.731.513-1.241 0-.51-.174-.927-.522-1.251-.349-.324-.847-.485-1.494-.485H39.52v3.453h2.8zm12.927 2.595c-1.307 0-2.492-.308-3.556-.924a6.711 6.711 0 0 1-2.511-2.53c-.61-1.07-.915-2.246-.915-3.528 0-1.281.305-2.457.915-3.528a6.711 6.711 0 0 1 2.51-2.529C52.756 6.308 53.94 6 55.248 6c1.306 0 2.492.308 3.556.924a6.711 6.711 0 0 1 2.51 2.53c.61 1.07.915 2.246.915 3.527 0 1.282-.305 2.458-.915 3.528a6.711 6.711 0 0 1-2.51 2.53c-1.064.616-2.25.924-3.556.924zm0-2.39a4.52 4.52 0 0 0 2.258-.578 4.177 4.177 0 0 0 1.615-1.624c.392-.697.588-1.494.588-2.39 0-.896-.196-1.692-.588-2.389a4.177 4.177 0 0 0-1.615-1.624 4.52 4.52 0 0 0-2.258-.579 4.47 4.47 0 0 0-2.25.579 4.195 4.195 0 0 0-1.605 1.624c-.392.697-.588 1.493-.588 2.39 0 .895.196 1.692.588 2.389a4.195 4.195 0 0 0 1.605 1.624 4.47 4.47 0 0 0 2.25.578zm15.353 2.39c-1.307 0-2.492-.308-3.556-.924a6.711 6.711 0 0 1-2.51-2.53c-.61-1.07-.915-2.246-.915-3.528 0-1.281.305-2.457.914-3.528a6.711 6.711 0 0 1 2.511-2.529C68.108 6.308 69.294 6 70.6 6c1.307 0 2.492.308 3.556.924a6.711 6.711 0 0 1 2.51 2.53c.61 1.07.915 2.246.915 3.527 0 1.282-.305 2.458-.914 3.528a6.711 6.711 0 0 1-2.511 2.53c-1.064.616-2.25.924-3.556.924zm0-2.39a4.52 4.52 0 0 0 2.259-.578 4.177 4.177 0 0 0 1.614-1.624c.392-.697.588-1.494.588-2.39 0-.896-.196-1.692-.588-2.389a4.177 4.177 0 0 0-1.614-1.624 4.52 4.52 0 0 0-2.259-.579 4.47 4.47 0 0 0-2.25.579 4.195 4.195 0 0 0-1.605 1.624c-.392.697-.588 1.493-.588 2.39 0 .895.196 1.692.588 2.389a4.195 4.195 0 0 0 1.606 1.624 4.47 4.47 0 0 0 2.249.578zM79.83 6.3h2.52v5.73h.15l4.89-5.73h3.043v.149L85.6 11.973l5.338 7.542v.149h-3.08l-3.994-5.693-1.512 1.773v3.92h-2.52V6.299zM93.779 6h3.248l3.546 9.39h.15L104.268 6h3.267v13.365h-2.501v-6.589l.15-2.221h-.15l-3.398 8.81h-1.96l-3.416-8.81h-.149l.15 2.221v6.59h-2.483V6zm20.8 0h2.894l5.021 13.365h-2.781l-1.12-3.192h-5.115l-1.12 3.192h-2.781L114.579 6zm3.193 7.859l-1.176-3.36-.486-1.606h-.149l-.485 1.606-1.195 3.36h3.49zM124.553 6h4.872c.871 0 1.646.18 2.324.541.678.361 1.204.862 1.577 1.503.374.64.56 1.366.56 2.175 0 .858-.27 1.62-.812 2.286a4.617 4.617 0 0 1-2.044 1.447l-.018.13 3.584 5.134v.15h-2.894l-3.453-5.022h-1.176v5.021h-2.52V6zm4.853 6.03c.573 0 1.04-.175 1.4-.523.361-.349.542-.79.542-1.326 0-.51-.172-.945-.514-1.306-.342-.361-.806-.542-1.39-.542h-2.371v3.696h2.333zm7.23-6.03h2.52v5.73h.15l4.89-5.73h3.043v.15l-4.835 5.525 5.34 7.541v.15h-3.08l-3.996-5.694-1.512 1.773v3.92h-2.52V6z"
-              fill="#ffffff"
-              fill-rule="nonzero"
-            />
-            <g>
-              <circle fill="#5267DF" cx="12.5" cy="12.5" r="12.5" />
-              <path
-                d="M9 9v10l3.54-3.44L16.078 19V9a2 2 0 0 0-2-2H11a2 2 0 0 0-2 2z"
-                fill="#FFF"
+        <form id="ctaForm" class="row justify-content-center g-2">
+          <div class="col-10 col-md-3">
+            <div class="position-relative input-wrapper error-container mb-3">
+              <input
+                type="email"
+                class="form-control py-3 w-100 bg-white text-dark"
+                id="inputEmail"
+                placeholder="Enter your email address"
               />
-            </g>
-          </g>
-        </svg>
+
+              <img
+                src="starter-code/images/icon-error.svg"
+                alt="Error Icon"
+                class="icon-error d-none"
+              />
+
+              <div
+                class="error-message d-none bg-danger text-white fs-6 py-2 px-3 text-start fst-italic"
+              >
+                Whoops, make sure it's an email
+              </div>
+            </div>
+          </div>
+
+          <div class="col-10 col-md-2">
+            <button
+              id="ctaButton"
+              type="submit"
+              class="btn btn-danger py-3 w-100"
+            >
+              Contact Us
+            </button>
+          </div>
+        </form>
       </div>
+    </section>
 
-    
-      <div class="d-flex flex-column flex-lg-row align-items-center gap-4 mb-3 mb-lg-0 ms-lg-5">
-        <a href="#features" class="nav-link text-white letter-spacing-sm">FEATURES</a>
-        <a href="#pricing" class="nav-link text-white letter-spacing-sm">PRICING</a>
-        <a href="#contact" class="nav-link text-white letter-spacing-sm">CONTACT</a>
+    <footer class="text-white py-5 footer-color">
+      <div class="container">
+        <div
+          class="d-flex flex-column flex-lg-row align-items-center justify-content-start"
+        >
+          <div class="mb-5 mb-lg-0">
+            <svg class="logo-svg" width="148" height="25">
+              <g fill="none" fill-rule="evenodd">
+                <path
+                  d="M37 6.299h5.227c.746 0 1.434.155 2.062.466.629.311 1.123.735 1.484 1.27s.542 1.12.542 1.754c0 .672-.165 1.254-.495 1.746-.33.491-.762.868-1.297 1.129v.15c.697.248 1.25.643 1.661 1.185.41.541.616 1.191.616 1.95 0 .735-.196 1.385-.588 1.951a3.817 3.817 0 0 1-1.587 1.307c-.665.305-1.403.457-2.212.457H37V6.299zm5.04 5.45c.548 0 .986-.152 1.316-.457.33-.305.495-.688.495-1.148 0-.448-.159-.824-.476-1.13-.318-.304-.738-.457-1.26-.457H39.52v3.192h2.52zm.28 5.619c.61 0 1.086-.159 1.428-.476.342-.317.513-.731.513-1.241 0-.51-.174-.927-.522-1.251-.349-.324-.847-.485-1.494-.485H39.52v3.453h2.8zm12.927 2.595c-1.307 0-2.492-.308-3.556-.924a6.711 6.711 0 0 1-2.511-2.53c-.61-1.07-.915-2.246-.915-3.528 0-1.281.305-2.457.915-3.528a6.711 6.711 0 0 1 2.51-2.529C52.756 6.308 53.94 6 55.248 6c1.306 0 2.492.308 3.556.924a6.711 6.711 0 0 1 2.51 2.53c.61 1.07.915 2.246.915 3.527 0 1.282-.305 2.458-.915 3.528a6.711 6.711 0 0 1-2.51 2.53c-1.064.616-2.25.924-3.556.924zm0-2.39a4.52 4.52 0 0 0 2.258-.578 4.177 4.177 0 0 0 1.615-1.624c.392-.697.588-1.494.588-2.39 0-.896-.196-1.692-.588-2.389a4.177 4.177 0 0 0-1.615-1.624 4.52 4.52 0 0 0-2.258-.579 4.47 4.47 0 0 0-2.25.579 4.195 4.195 0 0 0-1.605 1.624c-.392.697-.588 1.493-.588 2.39 0 .895.196 1.692.588 2.389a4.195 4.195 0 0 0 1.605 1.624 4.47 4.47 0 0 0 2.25.578zm15.353 2.39c-1.307 0-2.492-.308-3.556-.924a6.711 6.711 0 0 1-2.51-2.53c-.61-1.07-.915-2.246-.915-3.528 0-1.281.305-2.457.914-3.528a6.711 6.711 0 0 1 2.511-2.529C68.108 6.308 69.294 6 70.6 6c1.307 0 2.492.308 3.556.924a6.711 6.711 0 0 1 2.51 2.53c.61 1.07.915 2.246.915 3.527 0 1.282-.305 2.458-.914 3.528a6.711 6.711 0 0 1-2.511 2.53c-1.064.616-2.25.924-3.556.924zm0-2.39a4.52 4.52 0 0 0 2.259-.578 4.177 4.177 0 0 0 1.614-1.624c.392-.697.588-1.494.588-2.39 0-.896-.196-1.692-.588-2.389a4.177 4.177 0 0 0-1.614-1.624 4.52 4.52 0 0 0-2.259-.579 4.47 4.47 0 0 0-2.25.579 4.195 4.195 0 0 0-1.605 1.624c-.392.697-.588 1.493-.588 2.39 0 .895.196 1.692.588 2.389a4.195 4.195 0 0 0 1.606 1.624 4.47 4.47 0 0 0 2.249.578zM79.83 6.3h2.52v5.73h.15l4.89-5.73h3.043v.149L85.6 11.973l5.338 7.542v.149h-3.08l-3.994-5.693-1.512 1.773v3.92h-2.52V6.299zM93.779 6h3.248l3.546 9.39h.15L104.268 6h3.267v13.365h-2.501v-6.589l.15-2.221h-.15l-3.398 8.81h-1.96l-3.416-8.81h-.149l.15 2.221v6.59h-2.483V6zm20.8 0h2.894l5.021 13.365h-2.781l-1.12-3.192h-5.115l-1.12 3.192h-2.781L114.579 6zm3.193 7.859l-1.176-3.36-.486-1.606h-.149l-.485 1.606-1.195 3.36h3.49zM124.553 6h4.872c.871 0 1.646.18 2.324.541.678.361 1.204.862 1.577 1.503.374.64.56 1.366.56 2.175 0 .858-.27 1.62-.812 2.286a4.617 4.617 0 0 1-2.044 1.447l-.018.13 3.584 5.134v.15h-2.894l-3.453-5.022h-1.176v5.021h-2.52V6zm4.853 6.03c.573 0 1.04-.175 1.4-.523.361-.349.542-.79.542-1.326 0-.51-.172-.945-.514-1.306-.342-.361-.806-.542-1.39-.542h-2.371v3.696h2.333zm7.23-6.03h2.52v5.73h.15l4.89-5.73h3.043v.15l-4.835 5.525 5.34 7.541v.15h-3.08l-3.996-5.694-1.512 1.773v3.92h-2.52V6z"
+                  fill="#ffffff"
+                  fill-rule="nonzero"
+                />
+                <g>
+                  <circle fill="#5267DF" cx="12.5" cy="12.5" r="12.5" />
+                  <path
+                    d="M9 9v10l3.54-3.44L16.078 19V9a2 2 0 0 0-2-2H11a2 2 0 0 0-2 2z"
+                    fill="#FFF"
+                  />
+                </g>
+              </g>
+            </svg>
+          </div>
+
+          <div
+            class="d-flex flex-column flex-lg-row align-items-center gap-4 mb-3 mb-lg-0 ms-lg-5"
+          >
+            <a href="#features" class="nav-link text-white letter-spacing-sm"
+              >FEATURES</a
+            >
+            <a href="#pricing" class="nav-link text-white letter-spacing-sm"
+              >PRICING</a
+            >
+            <a href="#contact" class="nav-link text-white letter-spacing-sm"
+              >CONTACT</a
+            >
+          </div>
+
+          <div class="d-flex gap-5 mt-3 mt-lg-0 ms-lg-auto">
+            <a href="#" class="social-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24">
+                <path
+                  d="M22.675 0h-21.35C.592 0 0 .592 0 1.325v21.351C0 23.408.592 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.796.715-1.796 1.764v2.314h3.587l-.467 3.622h-3.12V24h6.116C23.408 24 24 23.408 24 22.676V1.325C24 .592 23.408 0 22.675 0z"
+                  fill="#fff"
+                /></svg
+            ></a>
+            <a href="#" class="social-icon"
+              ><svg width="24" height="24" viewBox="0 0 24 24">
+                <path
+                  d="M24 4.557a9.828 9.828 0 0 1-2.828.775 4.932 4.932 0 0 0 2.165-2.724 9.864 9.864 0 0 1-3.127 1.195 4.918 4.918 0 0 0-8.384 4.482A13.945 13.945 0 0 1 1.671 3.149a4.918 4.918 0 0 0 1.523 6.562 4.903 4.903 0 0 1-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 0 1-2.224.084 4.923 4.923 0 0 0 4.6 3.417A9.868 9.868 0 0 1 0 19.54a13.94 13.94 0 0 0 7.548 2.212c9.057 0 14.009-7.514 14.009-14.009 0-.213-.005-.425-.014-.636A10.025 10.025 0 0 0 24 4.557z"
+                  fill="#fff"
+                /></svg
+            ></a>
+          </div>
+        </div>
       </div>
-
-      
-      <div class="d-flex gap-5 mt-3 mt-lg-0 ms-lg-auto">
-        <a href="#"><img src="starter-code/images/icon-facebook.svg" alt="Facebook Icon" /></a>
-        <a href="#"><img src="starter-code/images/icon-twitter.svg" alt="Twitter Icon" /></a>
-      </div>
-
-    </div>
-  </div>
-</footer>
-
-
-
-
-
-
-
+    </footer>
 
     <script src="bootstrap.bundle.min.js"></script>
     <script src="index.js"></script>

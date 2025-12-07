@@ -38,10 +38,17 @@ document.getElementById("ctaForm").addEventListener("submit", function (e) {
   }
 });
 
-const btn = document.getElementById("ctaButton");
+function clickRedButton() {
+  const btn = document.getElementById("ctaButton");
 
-btn.addEventListener("click", () => {
-  if (window.innerWidth >= 992) {
-    btn.classList.add("clicked");
-  }
-});
+  btn.addEventListener("click", () => {
+    if (window.innerWidth >= 992) {
+      btn.classList.add("clicked");
+    }
+  });
+}
+
+clickRedButton();
+
+
+
