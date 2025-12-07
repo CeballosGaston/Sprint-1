@@ -110,9 +110,74 @@ a.nav-link {
 }
 
 .scaled:nth-child(2) {
-  transform: scale(0.85) translateY(2rem); 
+  transform: scale(0.85) translateY(2rem);
 }
 
 .scaled:nth-child(3) {
-  transform: scale(0.85) translateY(4rem); 
+  transform: scale(0.85) translateY(4rem);
+}
+
+.faq-arrow {
+  display: inline-block;
+  transform-origin: center;
+  transition: transform 0.22s;
+}
+
+details[open] .faq-arrow path {
+  stroke: red;
+}
+details[open] .faq-arrow {
+  transform: rotate(180deg);
+}
+
+.letter-spacing-sm {
+  letter-spacing: 0.2rem;
+}
+.error-container {
+  position: relative;
+  overflow: visible;
+}
+.error-container input {
+  padding-right: 2.5rem;
+  border: 1px solid #ccc;
+}
+
+.error-container.error input {
+  border: 2px solid #dc3545;
+  border-bottom-right-radius: 0; 
+  border-bottom-left-radius: 0; 
+}
+
+
+.icon-error {
+  position: absolute;
+  top: 35%;
+  right: 0.75rem;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+}
+
+.error-container.error .icon-error {
+  display: block;
+}
+
+.error-message {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  margin-top: -2px; 
+}
+
+.error-container.error .error-message {
+  display: block;
+}
+
+.btn-danger.clicked {
+  background-color: #fff !important;  
+  color: #dc3545 !important;         
+  border-color: #dc3545 !important;   
+}
+
+.footer-color{
+  background-color: rgb(33, 13, 89);
 }
