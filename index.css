@@ -93,7 +93,7 @@ a.nav-link {
     background: transparent;
     flex-direction: row;
     justify-content: flex-end;
-    gap: 1.5rem;
+   gap: 1.5rem;
     opacity: 1 !important;
     pointer-events: auto;
   }
@@ -112,6 +112,26 @@ a.nav-link {
     text-align: right;
   }
 }
+
+
+.menu-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 2.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  
+}
+
+.menu-header img{
+  margin-bottom: 1.3rem;
+}
+
+
 
 /*-----------------FEATURES--------------------*/
 
