@@ -4,17 +4,10 @@
 body {
   overflow-x: hidden;
 }
-a.nav-link {
-  color: hsl(228, 33%, 20%);
-}
 
 .landing {
   height: calc(100vh - 56.5px);
   overflow-x: hidden;
-}
-
-.landing .btn {
-  box-shadow: 0 2px 4px rgba(0 0 0 / 30%);
 }
 
 .landing .img-cont {
@@ -94,8 +87,8 @@ a.nav-link {
     flex-direction: row;
     justify-content: flex-end;
     gap: 1.5rem;
-    opacity: 1 !important;
     pointer-events: auto;
+    opacity: 1 !important;
   }
 
   .menu-overlay .nav-link {
@@ -131,14 +124,6 @@ a.nav-link {
 }
 
 .menu-header {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2rem 2.5rem;
-  position: absolute;
-  top: 0;
-  left: 0;
   z-index: 2000;
 }
 
