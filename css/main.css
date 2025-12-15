@@ -1,8 +1,5 @@
 @charset "UTF-8";
-/*-----------------------FIN CÓDIGO CON SASS-----------------------------*/
-/*-----------------------FIN CÓDIGO CON SASS-----------------------------*/
-/*-----------------------FIN CÓDIGO CON SASS-----------------------------*/
-/*-----------------------FIN CÓDIGO CON SASS-----------------------------*/
+
 * {
   margin: 0;
   padding: 0;
@@ -477,4 +474,4 @@ details[open] .summary svg {
   margin: 2rem 0 3rem 0;
 }
 
-/*# sourceMappingURL=main.css.map */
+
