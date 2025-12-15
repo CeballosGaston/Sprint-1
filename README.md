@@ -29,13 +29,13 @@ Este repositorio contiene un **proyecto frontend** implementado con **tres enfoq
 
 1. **Clonar el repositorio**
 ```bash
-git clone https://github.com/tuusuario/tu-repo.git
-cd tu-repo
-Cambiar a la rama deseada
+git clone (https://github.com/CeballosGaston/Sprint-1.git)
 
-bash
-Copiar código
-git checkout vanilla-css   # o sass / bootstrap
+Cambiar a la rama deseada:
+git checkout feature/vanilla-implementation
+git checkout feature/SASS-implementation
+git checkout feature/bootstrap-implementation
+
 Abrir el proyecto
 
 Abre index.html en tu navegador.
