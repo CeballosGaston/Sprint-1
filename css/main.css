@@ -1,6 +1,6 @@
 @charset "UTF-8";
 .paragraph, .paragraph-faq {
-  font-family: "Rubik", sans-serif;
+  
   line-height: 1.5;
   font-size: 0.9rem;
   color: #a0a6b1;
@@ -14,6 +14,7 @@
   margin: 0;
   padding: 0;
 }
+
 
 body {
   padding: 0;
@@ -337,7 +338,7 @@ body {
 
 .h5-style {
   margin: 0 0 1rem;
-  font-family: "Rubik", sans-serif;
+ 
   line-height: 1;
   color: #a0a6b1;
   text-align: center;
